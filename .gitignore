@@ -17,3 +17,6 @@ datos/datos_entrenamiento.csv
 
 ## paso 3
 datos/datos_union.csv
+
+# Resultados entrenamiento
+modelo/*

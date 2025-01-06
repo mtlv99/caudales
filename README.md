@@ -15,14 +15,18 @@ Mas información del dataset en [datos/descripcion.txt](datos/descripcion.txt)
 1. Clona este repositorio.
 2. Asegúrate de tener Python instalado en tu sistema.
 3. Instala dependencias adicionales:
-   - pandas
-   - geopandas
-   - matplotlib
-   - tensorflow
+
+```bash
+pip install pandas geopandas matplotlib scikit-learn tensorflow
+```
+
+Se puede verificar la version en [requirements.txt](requirements.txt).
 
 ## 1. Manejador de Archivos Grandes para Git
 
 Este script permite manejar archivos que exceden el límite de tamaño de GitHub (100MB) dividiéndolos en partes más pequeñas para su almacenamiento y posterior reconstrucción. Esto es necesario debido a que el dataset es muy grande para subirlo en un solo archivo, y hay que reconstruirlo.
+
+Nota: por defecto se utiliza un sample muy pequeño del dataset para verificar si el ambiente se configuró correctamente. Para utilizar el dataset completo, descomentar las variables globales en [config.py](config.py).
 
 ### Uso
 
@@ -85,6 +89,18 @@ python .\ETL_PANDAS_03.py
 ```
 
 
-## 2. Ejecutar Entrenamiento RNN
+## 3. Ejecutar Entrenamiento RNN
+
+Ejecutar entrenamiento del modelo.
+
+```bash
+python .\RNN_entrenamiento.py
+```
+
+## 4. Predecir evento
 
 Ejecutar las distintas partes de la RNN en orden.
+
+```bash
+python .\RNN_prediccion.py
+```

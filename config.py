@@ -15,16 +15,20 @@ gc.collect()
 
 ###########################################################################
 # Declaración de variables globales
-#-file_datos = "datos/datos.txt"
+###########################################################################
+
+## dataset pequeño, para probar si ambiente funciona correctamente.
 file_datos = "datos/little_data.csv"
+datos_incidentes_file = 'datos/incidentes_pq.csv'
+
+## Una vez se probó que todo funciona correctamente, se puede probar con el dataset entero
+# file_datos = "datos/datos.txt"
+# datos_incidentes_file = 'datos/eventos_estaciones.csv'
 
 fileshape = "datos/SHP/COMUNAS_V1.shp"
 
 file_datos_unificados = 'datos/datos_unificados.csv'
 
 datos_entrenamiento_file = 'datos/datos_entrenamiento.csv'
-
-#-datos_incidentes_file = 'datos/eventos_estaciones.csv'
-datos_incidentes_file = 'datos/incidentes_pq.csv'
 
 datos_union_file = 'datos/datos_union.csv'
