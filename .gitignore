@@ -1,2 +1,8 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
+*.py[cod]
+*$py.class
+
+# datos descomprimidos
+datos/SHP/COMUNAS_v1.shp
+datos/datos.txt
