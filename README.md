@@ -20,9 +20,9 @@ Mas información del dataset en [datos/descripcion.txt](datos/descripcion.txt)
    - matplotlib
    - tensorflow
 
-## Manejador de Archivos Grandes para Git
+## 1. Manejador de Archivos Grandes para Git
 
-Este script permite manejar archivos que exceden el límite de tamaño de GitHub (100MB) dividiéndolos en partes más pequeñas para su almacenamiento y posterior reconstrucción.
+Este script permite manejar archivos que exceden el límite de tamaño de GitHub (100MB) dividiéndolos en partes más pequeñas para su almacenamiento y posterior reconstrucción. Esto es necesario debido a que el dataset es muy grande para subirlo en un solo archivo, y hay que reconstruirlo.
 
 ### Uso
 
@@ -66,3 +66,25 @@ self.large_files = [
 - Asegúrate de añadir los archivos originales a `.gitignore`
 - Los chunks generados serán menores a 100MB para cumplir con las restricciones de GitHub
 - Mantén una copia de seguridad de los archivos originales
+
+## 2. Ejecutar ETL
+
+Ejecutar las distintas partes del ETL en orden.
+
+
+```bash
+python .\ETL_PANDAS_01.py
+```
+
+```bash
+python .\ETL_PANDAS_02.py
+```
+
+```bash
+python .\ETL_PANDAS_03.py
+```
+
+
+## 2. Ejecutar Entrenamiento RNN
+
+Ejecutar las distintas partes de la RNN en orden.

@@ -6,3 +6,14 @@ __pycache__/
 # datos descomprimidos
 datos/SHP/COMUNAS_v1.shp
 datos/datos.txt
+
+# archivos finales
+
+## paso 1
+datos/datos_unificados.csv
+
+## paso 2
+datos/datos_entrenamiento.csv
+
+## paso 3
+datos/datos_union.csv
