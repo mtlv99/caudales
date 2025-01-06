@@ -104,3 +104,8 @@ Ejecutar las distintas partes de la RNN en orden.
 ```bash
 python .\RNN_prediccion.py
 ```
+
+### Evento de ejemplo:
+
+- Codigo de estación: `1101`
+- Medición: `10500`
