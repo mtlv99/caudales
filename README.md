@@ -1,10 +1,13 @@
 # RNN Caudales
-RNN para predicción de inundaciones.
+RNN para predicción de inundaciones en Chile.
 
-Clase Razonamiento Artificial - UCreativa. Profesor Leonardo Correa.
+Clase Razonamiento Artificial - UCreativa (Costa Rica). Profesor Leonardo Correa.
 
 
 Mas información del dataset en [datos/descripcion.txt](datos/descripcion.txt)
+
+
+![datos/descripcion.txt](mapa.png)
 
 ## Requisitos
 
