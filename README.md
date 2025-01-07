@@ -118,7 +118,7 @@ python .\RNN_prediccion.py
 
 ## 5. Conectar a bot de Telegram
 
-Ejecutar el script para conectarse a tu bot de Telegram, o crear uno por medio del @BotFather desde el mismo Telegram. En [telegram/suscripcion.txt](telegram/suscripcion.txt) se encontrará la lista de IDs de los usuarios que se suscribieron al bot.
+Ejecutar el script para conectarse a tu bot de Telegram con un API ya existente, o crear uno por medio del @BotFather desde el mismo Telegram. En [telegram/suscripcion.txt](telegram/suscripcion.txt) se encontrará la lista de IDs de los usuarios que se suscribieron al bot.
 
 ```bash
 python .\sistema_prediccion.py
