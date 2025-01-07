@@ -4,6 +4,11 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'  # Solo muestra errores (oculta adverte
 
 import threading
 from telebot import TeleBot
+from dotenv import dotenv_values
+
+config  = dotenv_values(".env")
+
+TELEGRAM_API_TOKEN = config.get("TELEGRAM_API_KEY", "NO_TELEGRAM_API_KEY")
 
 import numpy as np
 from tensorflow.keras.models import load_model
@@ -13,11 +18,10 @@ import warnings
 warnings.filterwarnings("ignore", message="X does not have valid feature names")
 
 # BOT: 
-# Name: Sistema Prevención Inundaciones
-# Username BOT: sys_innundacion_bot
-# URL: t.me/sys_innundacion_bot
-API_TOKEN = "7697819440:AAFOOP6RdwQxZjJUBXvcU-LdOOJ-7rF16lM"
-chatbot = TeleBot(API_TOKEN)
+# Name: Sistema Prevención Inundaciones - Marco Leon
+# Username BOT: sys_floodings_marco_bot
+# URL: t.me/sys_floodings_marco_bot
+chatbot = TeleBot(TELEGRAM_API_TOKEN)
 
 # Cargar el modelo y el scalar
 model = load_model("modelo/modelo_inundaciones.h5", compile=False)
@@ -52,7 +56,7 @@ def predecir_evento(estacion_id, medicion):
 
 ###########################################################################
 def enviar_mensaje_masivo(mensajeEnviar):
-    with open("telegram/suscripcion.json", "r") as file:
+    with open("telegram/suscripcion.txt", "r") as file:
         for line in file:
             chatbot.send_message(line, mensajeEnviar)
     print ("Mensaje enviado.")
@@ -90,7 +94,7 @@ def loop_usuario():
 # Función para registrar una nueva persona
 @chatbot.message_handler(commands=["start"])
 def start_handler(message):
-    with open("telegram/suscripcion.json", "a") as file:
+    with open("telegram/suscripcion.txt", "a") as file:
         file.write(str(message.chat.id) + "\n")
         chatbot.reply_to(message, "Has quedado registrado en el servicio de Alertas")
         print (f"Registro exitoso para: {str(message.chat.id)}")

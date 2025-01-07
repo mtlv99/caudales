@@ -20,3 +20,6 @@ datos/datos_union.csv
 
 # Resultados entrenamiento
 modelo/*
+
+# env variables
+.env

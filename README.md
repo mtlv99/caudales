@@ -20,10 +20,12 @@ Mas información del dataset en [datos/descripcion.txt](datos/descripcion.txt)
 3. Instala dependencias adicionales:
 
 ```bash
-pip install pandas geopandas matplotlib scikit-learn tensorflow
+pip install pandas geopandas matplotlib scikit-learn tensorflow python-telegram-bot urllib3 six python-dotenv
 ```
 
 Se puede verificar la version en [requirements.txt](requirements.txt).
+
+Luego de instalar las dependencias, se debe copiar el [.env.example](.env.example) en un archivo nuevo llamado `.env` y reemplazar la variable `TELEGRAM_API_KEY` con la API key de tu bot de Telegram.
 
 ## 1. Manejador de Archivos Grandes para Git
 
@@ -110,5 +112,14 @@ python .\RNN_prediccion.py
 
 ### Evento de ejemplo:
 
-- Codigo de estación: `1101`
-- Medición: `10500`
+- Codigo de estación: `15202`
+- Medición: `3`
+
+
+## 5. Conectar a bot de Telegram
+
+Ejecutar el script para conectarse a tu bot de Telegram, o crear uno por medio del @BotFather desde el mismo Telegram. En [telegram/suscripcion.txt](telegram/suscripcion.txt) se encontrará la lista de IDs de los usuarios que se suscribieron al bot.
+
+```bash
+python .\sistema_prediccion.py
+```
